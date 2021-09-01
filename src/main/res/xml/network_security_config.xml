@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<network-security-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+
+        <domain includeSubdomains="true">wewill10.dothome.co.kr</domain>
+
+        <domain includeSubdomains="true">code.jquery.com</domain>
+
+        <domain includeSubdomains="true">dapi.kakao.com</domain> <!--다음지도-->
+
+        <domain includeSubdomains="true">daumcdn.net</domain> <!--다음맵 이미지(머냐이거????)-->
+
+        <domain includeSubdomains="true">ssl.daumcdn.net</domain>
+
+        <domain includeSubdomains="true">postcode.map.daum.net</domain>
+
+        <domain includeSubdomains="true">goo.gl</domain>
+
+    </domain-config>
+
+    <!--
+
+    <domain-config cleartextTrafficPermitted="true">
+
+    </domain-config>
+
+    -->
+
+</network-security-config>

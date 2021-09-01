@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragment2">
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/sch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="일정 제목"
+                android:textSize="70px"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:inputType="text"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon_memo"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"
+                android:hint="메모"
+                android:textSize="50px"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:inputType="text"
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/icon_clock"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="6"
+                    android:layout_gravity="center"
+                    android:text="종일"
+                    android:textSize="50px"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="50px"
+                    android:text="시작" />
+
+                <TextView
+                    android:id="@+id/start2"
+                    android:layout_weight="4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="50px"
+                    android:text="0000-00-00" />
+
+                <TextView
+                    android:id="@+id/start3"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="50px"
+                    android:text="00:00" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mcv_selectionColor="#a9dbf0cb"
+                    app:mcv_showOtherDates="defaults" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="50px"
+                    android:text="종료" />
+
+                <TextView
+                    android:id="@+id/start12"
+                    android:layout_weight="4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="50px"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/start13"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="50px"
+                    android:text="00:00" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mcv_selectionColor="#a9dbf0cb"
+                    app:mcv_showOtherDates="defaults" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_baseline_access_alarm_24"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:id="@+id/alarm"
+                android:text="알람 설정"
+                android:textSize="50px"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/list01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon_map"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"
+                android:hint="위치"
+                android:textSize="50px"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:inputType="text"
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listlayout"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_baseline_group_add_24"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/intext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"
+                android:text="참석자 추가"
+                android:textSize="50px"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@null" />
+            <EditText
+                android:id="@+id/inedit"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_gravity="center"
+                android:hint="이메일 입력"
+                android:textSize="50px"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:inputType="text"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/inbutton"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="추가"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="">
+
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name1layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/webView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
